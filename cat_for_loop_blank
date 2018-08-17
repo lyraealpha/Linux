@@ -1,2 +1,2 @@
-#this is for search keyword from one file against another file;and blanks exist in the keyword file
+#this is for search keyword from one file against another file;and blanks exist in each line of the keyword file
 (IFS=$'\n';for i in `cat ../../../keyword.txt`;do  cat datouxiezhu.annotation | grep -i $i >./search_results/$i.out;done)
