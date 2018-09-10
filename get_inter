@@ -1,0 +1,2 @@
+head -1 fpkm_ave.txt > new_inter_fpkm.txt && for i in `cat abc_inter_final`;do cat fpkm_ave.txt|awk '{if ("'$i'" == $1) print $0}';done >> new_inter_fpkm.txt
+head -1 new_inter_fpkm.txt > T05T06_T01T02_T03T04.txt && cat new_inter_fpkm.txt|awk '{if($4>=$2 &&$2>=$3) print $0}' >>  T05T06_T01T02_T03T04.txt
