@@ -1,0 +1,4 @@
+less -SN T01_T03_vs_T04_T05_T06.DEG.xls |cut -f1 > T01_T03_vs_T04_T05_T06.DEGID
+for i in `cat  T01_T03_vs_T04_T05_T06.DEGID`;do cat classification.txt |grep -w $i;done >T01_T03_vs_T04_T05_T06.DTF
+less -SN T01_T03_vs_T04_T05_T06.DTF |cut -f1 > T01_T03_vs_T04_T05_T06.DTFID
+for i in `cat T01_T03_vs_T04_T05_T06.DTFID`;do less -SN T01_T03_vs_T04_T05_T06.DEG.xls| grep -w $i;done > T01_T03_vs_T04_T05_T06.DTFexpression
