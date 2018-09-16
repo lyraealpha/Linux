@@ -1,1 +1,0 @@
-awk 'BEGIN{OFS="\t"} {if($3~/mRNA/) {mrna_line=$0;sub("mRNA","gene",$3);new_gene_line =$0;sub("ID","Parent",$9);print new_gene_line"\n"mrna_line$9} else{cds=$0;id=$9;sub("Parent","ID",id);print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"id$9}}' watermelon_v1.gff > new.gff
