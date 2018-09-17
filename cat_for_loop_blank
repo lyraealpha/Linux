@@ -1,2 +1,4 @@
 #this is for search keyword from one file against another file;and blanks exist in each line of the keyword file
 (IFS=$'\n';for i in `cat ../../../keyword.txt`;do  cat datouxiezhu.annotation | grep -i $i >./search_results/$i.out;done)
+
+ (IFS=$'\n';echo '1_30_percent:';for i in `cat 1_30_percent`;do echo $i':' && cat ../All_Database_annotation.csv|grep -i $i;done)|less -SN|awk -F',' '{print $1}'
