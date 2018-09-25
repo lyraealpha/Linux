@@ -1,0 +1,2 @@
+PATH=$PATH:/myPATH
+export PATH="/myPATH:$PATH"
