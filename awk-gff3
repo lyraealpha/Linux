@@ -1,0 +1,1 @@
+cat Rubus_occidentalis_v1.1.lifted_1.gff3|sed -e s/\;Name=.*//g |awk 'BEGIN{OFS="\t"} {if($3~/mRNA/) {mRNA_line=$0;sub("mRNA","gene",$0);gene_line=$0;parent=$9;sub("ID=","Parent=",parent);print gene_line"\n"mRNA_line".1"";"parent}else if($3~/exon/) { print $0".1"}else if($3~/CDS/) { print $0".1"}else{print $0}}' >Rubus_occidentalis_v1.1.lifted_new_final.gff
