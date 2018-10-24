@@ -1,3 +1,17 @@
 #formatdb
 formatdb -i db.fasta -p T -o T# -p F nu T pro
 blastall -p blastx -i query -d db -o blast_result -e 1e-5 -b 5 -v 5 -m8
+
+
+Query id：查询序列ID标识
+Subject id：比对上的目标序列ID标识
+% identity：序列比对的一致性百分比
+alignment length：符合比对的比对区域的长度
+mismatches：比对区域的错配数
+gap openings：比对区域的gap数目
+q. start：比对区域在查询序列(Query id)上的起始位点
+q. end：比对区域在查询序列(Query id)上的终止位点
+s. start：比对区域在目标序列(Subject id)上的起始位点
+s. end：比对区域在目标序列(Subject id)上的终止位点
+e-value：比对结果的期望值，解释是大概多少次随即比对才能出现一次这个score,Evalue越小，表明这种情况从概率上越不可能发生，那么发生了即说明这更有可能是真实的相似序列
+bit score：比对结果的bit score值
