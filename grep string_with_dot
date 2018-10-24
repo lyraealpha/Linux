@@ -1,0 +1,1 @@
+cat bak_DEG_Analysis/T01_vs_T04/T01_vs_T04.final.xls|grep -Frw PB.260.1    
