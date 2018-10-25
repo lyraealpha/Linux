@@ -1,0 +1,1 @@
+ascp -T -k1 -l6.5M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/sra/sra-instant/reads/ByRun/sra/SRR/SRR605/SRR6059709/SRR6059709.sra $PWD
