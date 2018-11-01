@@ -20,19 +20,62 @@ fill	=	yes
 
 show_label       = yes
 # see etc/fonts.conf for list of font names
-label_font       = default 
-label_radius     = 1.025r  # if ideogram radius is constant, and you'd like labels close to image edge, 
+label_font       = bold 
+label_radius     = 1.055r  # if ideogram radius is constant, and you'd like labels close to image edge, 
                            # use the dims() function to access the size of the image
                            # label_radius  = dims(image,radius) - 60p
-label_size       = 35
+label_size       = 45
 label_parallel   = yes
 #label_case = upper
 
 </ideogram>
 
 
+################################################################
+# for ticks
+################################################################
+# 是否显示 ticks
+show_ticks         = yes
+# 是否显示 ticks 的 lables
+show_tick_labels    = yes
 
+## 设定 ticks
+<ticks>
+## ticks 的设置
+# 设定 ticks 的位置
+radius           = 1r
+# 设定 ticks 的颜色
+color            = black
+# 设定 ticks 的厚度
+thickness        = 3p
+# 设定 ticks' label 的值的计算。将该刻度对应位置的值 * multiplier 得到能展示到圈图上的 label 值。
+multiplier       = 1e-6
+# label 值的格式化方法。%d 表示结果为整数；%f 结果为浮点数； %.1f 结果为小数点后保留1位； %.2f 结果为小数点后保留2位。
+format           = %d
 
+##set 2 ticks  one for zero,one for axis。
+
+<tick>
+spacing        = 5000000
+size           = 15p
+# 由于设置的是大刻度，以下用于设置展示 ticks' label。
+show_label     = no
+label_size     = 15p
+label_offset   = 15p
+format         = %d
+</tick>
+
+<tick>
+spacing        = 50000000
+size           = 20p
+# 由于设置的是大刻度，以下用于设置展示 ticks' label。
+show_label     = yes
+label_size     = 20p
+label_offset   = 15p
+format         = %d
+</tick>
+
+</ticks>
 ################################################################
 # for plots 
 ################################################################
