@@ -1,0 +1,1 @@
+awk  '{if (NR==1) {print $0} else {printf "%s\t%'\''d\t%s\t%s\t%s\t%s\n",$1,$2,$3,$4,$5,$6}}'
